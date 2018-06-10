@@ -1,0 +1,39 @@
+{{! YOUR CODE HERE }}
+
+{{> header}}
+
+<!-- <a href="/users/{{user._id}}">Back to Profile</a> -->
+
+<body id="body">
+
+<div class="container-fluid" id="signup-box">
+    <div class="col-xs-10 col-xs-offset-1">
+
+    <h3 id="space-down">Create Content</h3>
+
+    <form method="POST" action="/post/content">
+      <div class="form-group">
+        <input placeholder="When is your event?" type="date" name="date" class="form-control">
+      </div>
+      <div class="form-group">
+        <input placeholder="Where" type="text" name="location" class="form-control">
+      </div>
+      <div class="form-group">
+        <input placeholder="Anything else?" type="text" name="description" class="form-control" id="space-down">
+      </div>
+      <div class="form-group">
+        <input placeholder="domain" type="text" name="domain" class="form-control" id="space-down">
+      </div>
+      <div class="form-group">
+        <input placeholder="url" type="text" name="url" class="form-control" id="space-down">
+      </div>
+      <!-- <div class="form-group">
+        <textarea name="content" rows="10" cols="33" placeholder='post it up'></textarea>
+      </div> -->
+      <input type="submit" class="btn btn-info" id="signup-button" value="Post Content">
+    </form>
+
+    </div>
+</div>
+
+</div>

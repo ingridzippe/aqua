@@ -1,0 +1,19 @@
+{{! YOUR CODE HERE }}
+
+{{> header}}
+
+<body id="body">
+
+    <a href="/users/{{user._id}}">Back to Profile</a>
+
+    {{#each contents}}
+      <div id="signup-box">
+        <p>{{displayName}}</p>
+        <p>{{date}}</p>
+        <p>{{location}}</p>
+        <p>{{description}}</p>
+      </div>
+    {{/each}}
+
+
+</body>

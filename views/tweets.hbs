@@ -1,0 +1,19 @@
+{{! YOUR CODE HERE }}
+
+{{> header}}
+
+<body id="body">
+
+    <a href="/users/{{user._id}}">Back to Profile</a>
+
+    {{#each events}}
+      <div id="signup-box">
+        <p>{{displayName}}</p>
+        <p>{{eventDate}}</p>
+        <p>{{eventLocation}}</p>
+        <p>{{eventDescription}}</p>
+      </div>
+    {{/each}}
+
+
+</body>

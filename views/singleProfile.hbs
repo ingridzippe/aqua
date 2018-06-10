@@ -1,0 +1,67 @@
+
+{{> header}}
+
+<body id="body">
+
+<ul id="move-down">
+    <li><a href="/logout">Logout</a></li>
+    <li><a href="/posts/">Your Feed</a></li>
+    <li><a href="/post/new">Make Tweet</a></li>
+    <li><a href="/users/">Discover Other Users</a></li>
+</ul>
+
+<div class="container-fluid" id="single-profile-box">
+    <div class="col-xs-10 col-xs-offset-1">
+
+    <h2>{{user.displayName}}</h2>
+
+    <h4>Profile Picture:</h4>
+    <img src='{{user.imgUrl}}'>
+
+    <form method="POST" action="/follow/{{user._id}}">
+      <input type="submit" class="btn btn-info" id="followButton" value="{{follow}}">
+    </form>
+
+    <div class="followersContainer">
+    <h4>Following:</h4>
+    {{#each peopleYouFollow}}
+      {{#each following}}
+        <p>{{displayName}}</p>
+      {{/each}}
+    {{/each}}
+    <h4>Follower:</h4>
+    {{#each peopleWhoFollowYou}}
+        {{#each follower}}
+            <p>{{displayName}}</p>
+        {{/each}}
+    {{/each}}
+    </div>
+    <!-- <div class="followingContainer">
+    <h4>Following:</h4>
+    {{#each followings}}
+      <div>{{this.following.displayName}}
+          <form  action="/unfollow/{{this.to._id}}" method="post">
+            <input style="display: inline;" type="submit" value="Unfollow">
+          </form>
+      </div>
+    {{/each}}
+    </div> -->
+
+    <h4>Bio:</h4>
+    <p>{{user.bio}}</p>
+
+    <h4>Events:</h4>
+    {{#each events}}
+      <div id="signup-box">
+        <p>{{displayName}}</p>
+        <p>{{eventDate}}</p>
+        <p>{{eventLocation}}</p>
+        <p>{{eventDescription}}</p>
+      </div>
+    {{/each}}
+
+
+</div>
+</div>
+
+</body>

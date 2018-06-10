@@ -1,0 +1,17 @@
+{{! YOUR CODE HERE }}
+
+{{> header}}
+
+<body id="body">
+<!-- <a href="/users/{{user._id}}">Back to Profile</a> -->
+
+    <div class="user-list" id="signup-box">
+        {{#each allUsers}}
+          <ul class="list-unstyled">
+            <li><a href="/users/{{_id}}">{{displayName}}</a></li>
+          </ul>
+        {{/each}}
+    </div>
+
+
+</body>

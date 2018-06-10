@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Prototype</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/82d1787fbf.js"></script>
+    <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'/>
+	<link rel="stylesheet" type="text/css" href="/site_style.css"/>
+
+    <div class="topbar">
+       <div class="left-icons">
+           <span id="proto-logo">P</span>
+           <span id="proto-title">Prototype</span>
+       </div>
+       <div class="right-icons">
+            <a href="/post/content"><span id="pencil" class="fa fa-pencil-square-o" data-toggle="collapse"></span></a>
+            <a href="/post/new"><span id="pencil" class="fa fa-pencil-square-o" data-toggle="collapse"></span></a>
+            <span id="heart" class="fa fa-heart-o" data-toggle="collapse"></span>
+            <a href="/users/{{requser._id}}"><span id="person" class="fa fa-user-o" data-toggle="collapse"></span></a>
+       </div>
+    </div>
+
+</head>
+
+<body>
+
+	<div id="menu" class="collapse" style="display: none">
+		<span id="plus-white" class="fa fa-plus fa-4x"></span>
+		<div class="navigation">
+            <a href='/tech'><div class="nav-tech"><h2>TECH</h2></div></a>
+			<a href='/video'><div class="nav-video"><h2>VIDEO</h2></div></a>
+			<a href='/pics'><div class="nav-pics"><h2>PICS</h2></div></a>
+			<a href="/bio"><div class="nav-bio"><h2 class="bio">BIO</h2></div></a>
+		</div>
+	</div>
+
+	<div id="social" class="collapse" style="display: none">
+		<span id="x" class="fa fa-close"></span>
+		<div class="social-icons">
+			<a href="https://www.youtube.com/channel/UCNzlsqfaijuQoSF29Te1Grw" target="_blank">
+				<span id="soc-icon" class="fa fa-youtube-play"></span>
+			</a>
+			<a href="https://www.instagram.com/ingridnow/" target="_blank">
+				<span id="soc-icon" class="fa fa-instagram"></span>
+			</a>
+			<a href="https://ense.nyc/ingrid" target="_blank">
+				<span id="ense">ense</span>
+			</a>
+			<a href="https://www.facebook.com/ingridzippe" target="_blank">
+				<span id="soc-icon" class="fa fa-facebook"></span>
+			</a>
+		</div>
+	</div>
+
+</body>
